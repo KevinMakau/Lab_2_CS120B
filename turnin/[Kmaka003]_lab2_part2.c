@@ -38,6 +38,12 @@ int main(void) {
 	if (tmpA & 0x08) {
         	cntavail = cntavail + 1;
         }
+		
+	cntavail = 4 - cntavail;
+
+	if (cntavail == 0x00){
+		cntavail = 0x80;
+	}
          
         PORTC = cntavail;
     }
